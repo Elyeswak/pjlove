@@ -67,12 +67,12 @@ const heart = 'M0 6 C-10 -2 -6 -10 0 -5 C6 -10 10 -2 0 6Z'
       <!-- his arm (coat sleeve) -->
       <line x1="114" y1="44" :x2="leftHand.x - 8" :y2="leftHand.y" stroke="var(--ink)" stroke-width="18" stroke-linecap="round" />
       <line x1="114" y1="44" :x2="leftHand.x - 8" :y2="leftHand.y" stroke="var(--coat)" stroke-width="13" stroke-linecap="round" />
-      <ellipse :cx="leftHand.x" :cy="leftHand.y" rx="7" ry="10" fill="var(--skin)" stroke="var(--ink)" stroke-width="3" />
+      <ellipse :cx="leftHand.x" :cy="leftHand.y" rx="7" ry="10" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="3" />
 
       <!-- her arm (black sleeve) -->
       <line x1="390" y1="79" :x2="rightHand.x + 8" :y2="rightHand.y" stroke="var(--ink)" stroke-width="16" stroke-linecap="round" />
       <line x1="390" y1="79" :x2="rightHand.x + 8" :y2="rightHand.y" stroke="var(--sleeve)" stroke-width="11" stroke-linecap="round" />
-      <ellipse :cx="rightHand.x" :cy="rightHand.y" rx="6" ry="9" fill="var(--skin)" stroke="var(--ink)" stroke-width="3" />
+      <ellipse :cx="rightHand.x" :cy="rightHand.y" rx="6" ry="9" fill="var(--skin-her)" stroke="var(--ink)" stroke-width="3" />
 
       <!-- hearts rising from the pot -->
       <g :transform="`translate(${cx} ${base - clay.h - 8})`">

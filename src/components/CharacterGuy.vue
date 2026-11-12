@@ -49,7 +49,7 @@ const heart = (x, y) => `M${x} ${y + 4} l-4.6 -4.6 a2.7 2.7 0 0 1 4.6 -3.4 a2.7 
     <path d="M58 316 q6 -3 12 -3 M90 313 q6 0 12 3" stroke="#5a5054" stroke-width="1.5" fill="none" />
 
     <!-- long thin neck -->
-    <rect x="75" y="108" width="10" height="34" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
+    <rect x="75" y="108" width="10" height="34" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="2.5" />
 
     <!-- tailcoat -->
     <path d="M56 136 Q80 127 104 136 L100 198 L114 256 L86 246 L80 212 L74 246 L46 256 L60 198 Z" fill="var(--coat)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" />
@@ -66,7 +66,7 @@ const heart = (x, y) => `M${x} ${y + 4} l-4.6 -4.6 a2.7 2.7 0 0 1 4.6 -3.4 a2.7 
     <g v-if="arms.l !== null" class="arm" :style="{ '--rot': arms.l + 'deg', transformOrigin: '59.5px 142px' }">
       <rect x="53" y="138" width="13" height="88" rx="6" fill="var(--coat)" stroke="var(--ink)" stroke-width="2.5" />
       <rect x="53" y="220" width="13" height="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2" />
-      <ellipse cx="59.5" cy="232" rx="6" ry="8" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
+      <ellipse cx="59.5" cy="232" rx="6" ry="8" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="2.5" />
     </g>
     <g v-if="arms.r !== null" class="arm" :class="{ waving: pose === 'wave' }" :style="{ '--rot': arms.r + 'deg', transformOrigin: '100.5px 142px' }">
       <g v-if="flower">
@@ -77,15 +77,15 @@ const heart = (x, y) => `M${x} ${y + 4} l-4.6 -4.6 a2.7 2.7 0 0 1 4.6 -3.4 a2.7 
       </g>
       <rect x="94" y="138" width="13" height="88" rx="6" fill="var(--coat)" stroke="var(--ink)" stroke-width="2.5" />
       <rect x="94" y="220" width="13" height="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2" />
-      <ellipse cx="100.5" cy="232" rx="6" ry="8" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
+      <ellipse cx="100.5" cy="232" rx="6" ry="8" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="2.5" />
     </g>
 
     <!-- head: long oval face -->
-    <ellipse cx="50" cy="84" rx="5" ry="8" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
-    <ellipse cx="110" cy="84" rx="5" ry="8" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
-    <ellipse cx="80" cy="80" rx="30" ry="37" fill="var(--skin)" stroke="var(--ink)" stroke-width="3" />
+    <ellipse cx="50" cy="84" rx="5" ry="8" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="2.5" />
+    <ellipse cx="110" cy="84" rx="5" ry="8" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="2.5" />
+    <ellipse cx="80" cy="80" rx="30" ry="37" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="3" />
     <circle v-for="(c, i) in curls" :key="i" :cx="c[0]" :cy="c[1]" :r="c[2]" fill="var(--hair-him)" />
-    <path :d="shine" stroke="var(--hair-shine)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path :d="shine" stroke="var(--hair-shine-him)" stroke-width="2.5" fill="none" stroke-linecap="round" />
 
     <!-- big eyes with tired little shadows -->
     <path d="M58 95 q9 5 18 0 M84 95 q9 5 18 0" stroke="var(--eye-shadow)" stroke-width="3" fill="none" stroke-linecap="round" />
@@ -104,7 +104,7 @@ const heart = (x, y) => `M${x} ${y + 4} l-4.6 -4.6 a2.7 2.7 0 0 1 4.6 -3.4 a2.7 
       </template>
     </g>
     <!-- droopy lids when sad -->
-    <g v-if="mood === 'sad'" fill="var(--skin)" stroke="var(--ink)" stroke-width="2">
+    <g v-if="mood === 'sad'" fill="var(--skin-him)" stroke="var(--ink)" stroke-width="2">
       <path d="M57 82 A10 10 0 0 1 77 82 Z" />
       <path d="M83 82 A10 10 0 0 1 103 82 Z" />
     </g>

@@ -46,35 +46,36 @@ const heart = (x, y) => `M${x} ${y + 4.5} l-5 -5 a3 3 0 0 1 5 -3.8 a3 3 0 0 1 5 
     <circle v-for="(c, i) in ring" :key="'r' + i" :cx="c[0]" :cy="c[1]" r="13" fill="var(--hair-her)" />
 
     <!-- neck + choker -->
-    <rect x="75" y="108" width="10" height="28" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
+    <rect x="75" y="108" width="10" height="28" fill="var(--skin-her)" stroke="var(--ink)" stroke-width="2.5" />
     <rect x="74" y="120" width="12" height="4.5" fill="var(--ink)" />
     <path d="M80 129 l-2.6 -2.6 a1.6 1.6 0 0 1 2.6 -2 a1.6 1.6 0 0 1 2.6 2 z" fill="var(--blood-soft)" />
 
     <!-- dress: lace hem, flared skirt, corset bodice -->
     <circle v-for="(l, i) in lace" :key="'l' + i" :cx="l[0]" :cy="l[1]" r="5" fill="var(--ink)" />
-    <path d="M66 174 L94 174 L126 228 Q80 242 34 228 Z" fill="var(--blood)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" />
-    <path d="M72 180 L58 232 M80 180 L80 236 M88 180 L102 232" stroke="rgba(0,0,0,0.28)" stroke-width="2" fill="none" />
-    <path d="M62 134 Q80 128 98 134 L95 176 L65 176 Z" fill="var(--blood)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" />
-    <path d="M66 134 Q80 141 94 134" stroke="var(--ink)" stroke-width="3" fill="none" />
-    <path d="M76 145 L84 152 M84 145 L76 152 M76 155 L84 162 M84 155 L76 162 M76 165 L84 172 M84 165 L76 172" stroke="var(--ink)" stroke-width="1.6" />
+    <path d="M64 174 L96 174 Q114 192 128 228 Q80 242 32 228 Q46 192 64 174 Z" fill="var(--blood)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" />
+    <path d="M72 182 L56 232 M80 182 L80 236 M88 182 L104 232" stroke="rgba(0,0,0,0.28)" stroke-width="2" fill="none" />
+    <path d="M63 133 Q80 126 97 133 L97 146 L63 146 Z" fill="var(--skin-her)" />
+    <path d="M59 137 Q65 131 70 139 Q76 147 80 141 Q84 147 90 139 Q95 131 101 137 C109 147 108 161 97 168 L96 176 L64 176 L63 168 C52 161 51 147 59 137 Z" fill="var(--blood)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" />
+    <path d="M66 158 Q73 164 80 159 Q87 164 94 158" stroke="rgba(0,0,0,0.35)" stroke-width="2" fill="none" stroke-linecap="round" />
+    <path d="M77 162 L83 167 M83 162 L77 167 M77 167 L83 172 M83 167 L77 172" stroke="var(--ink)" stroke-width="1.5" />
     <rect x="64" y="172" width="32" height="5" fill="var(--ink)" />
 
     <!-- arms: long black lace sleeves -->
     <g v-if="arms.l !== null" class="arm" :class="{ waving: pose === 'wave' }" :style="{ '--rot': arms.l + 'deg', transformOrigin: '63.5px 140px' }">
       <rect x="58" y="136" width="11" height="70" rx="5" fill="var(--sleeve)" stroke="var(--ink)" stroke-width="2" />
       <path d="M58 202 L69 202 L73 212 L54 212 Z" fill="var(--sleeve)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" />
-      <ellipse cx="63.5" cy="217" rx="5" ry="7" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
+      <ellipse cx="63.5" cy="217" rx="5" ry="7" fill="var(--skin-her)" stroke="var(--ink)" stroke-width="2.5" />
     </g>
     <g v-if="arms.r !== null" class="arm" :style="{ '--rot': arms.r + 'deg', transformOrigin: '96.5px 140px' }">
       <rect x="91" y="136" width="11" height="70" rx="5" fill="var(--sleeve)" stroke="var(--ink)" stroke-width="2" />
       <path d="M91 202 L102 202 L106 212 L87 212 Z" fill="var(--sleeve)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" />
-      <ellipse cx="96.5" cy="217" rx="5" ry="7" fill="var(--skin)" stroke="var(--ink)" stroke-width="2.5" />
+      <ellipse cx="96.5" cy="217" rx="5" ry="7" fill="var(--skin-her)" stroke="var(--ink)" stroke-width="2.5" />
     </g>
 
     <!-- head -->
-    <ellipse cx="80" cy="78" rx="29" ry="33" fill="var(--skin)" stroke="var(--ink)" stroke-width="3" />
+    <ellipse cx="80" cy="78" rx="29" ry="33" fill="var(--skin-her)" stroke="var(--ink)" stroke-width="3" />
     <circle v-for="(c, i) in bangs" :key="'b' + i" :cx="c[0]" :cy="c[1]" :r="c[2]" fill="var(--hair-her)" />
-    <path :d="shine" stroke="var(--hair-shine)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path :d="shine" stroke="var(--hair-shine-her)" stroke-width="2.5" fill="none" stroke-linecap="round" />
 
     <!-- little red rose in her hair -->
     <g transform="translate(106 46)">
@@ -84,7 +85,6 @@ const heart = (x, y) => `M${x} ${y + 4.5} l-5 -5 a3 3 0 0 1 5 -3.8 a3 3 0 0 1 5 
     </g>
 
     <!-- eyes -->
-    <path d="M58 96 q9 4 18 0 M84 96 q9 4 18 0" stroke="var(--eye-shadow)" stroke-width="2.5" fill="none" stroke-linecap="round" />
     <g v-if="mood === 'shy'" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
       <path d="M57 84 q10 7 20 0 M57 85 l-4 3 M60 88 l-2 4" />
       <path d="M83 84 q10 7 20 0 M103 85 l4 3 M100 88 l2 4" />

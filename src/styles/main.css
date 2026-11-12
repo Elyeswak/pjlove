@@ -6,9 +6,12 @@
   --blood-soft: #a3182b;
   --blush: #e48f9e;
   --skin: #f3d9c8;
-  --hair-him: #3b2417;
-  --hair-her: #4f2d1d;
-  --hair-shine: #7a5038;
+  --skin-him: #d9a77f;      /* warm tan — tweak to match */
+  --skin-her: #d9a77f;      /* same warm tan as him */
+  --hair-him: #111013;      /* black */
+  --hair-shine-him: #3d3840;
+  --hair-her: #2a1710;      /* very dark brunette */
+  --hair-shine-her: #5c3b2a;
   --coat: #2b2326;
   --sleeve: #161214;
   --iris: #4a2a1a;
